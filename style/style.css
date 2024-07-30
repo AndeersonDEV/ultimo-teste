@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@500&display=swap');
+
+:root {
+    --bg-principal: rgb(32, 127, 206);
+    --bg-secundario: rgb(16, 43, 75);
+    --cor-texto-principal: rgb(219, 173, 69);
+    --cor-texto-secundario: #fff
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--cor-texto-principal);
+    font-family: "Sora", sans-serif;
+}
+
+.cabecalho {
+    background-color: var(--bg-secundario);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--cor-texto-secundario)
+}
+
+.cabecalho img {
+    width: 5%;
+    position: relative;
+    align-self: flex-start;
+}
+
+.container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.chave_acesso {
+    width: 20rem;
+}
+
+#loja {
+    width: 3rem;
+}
+
+#envia {
+    text-align: center;
+    width: 6rem;
+    height: 3rem;
+}
+
+.form {
+    display: flex;
+    background-color: var(--bg-secundario);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-enviar {
+    display: flex;
+    justify-content: center;
+}
+.pesquisar__input {
+    width: 260px;
+    height: 32px;
+    border: 1px solid rgb(211, 211, 211);
+    font-size: 16px;
+    padding: 3px 8px;
+    border: 1px solid rgb(211, 211, 211);
+    color: var(--cor-texto-principal)
+}
+
+.pesquisar__botao {
+    background-image: url(../assets/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid rgb(211, 211, 211);
+    background-color: #F9F9F9;
+    border-left: none;
+    padding: 15px 15px;
+    cursor: pointer;
+}
+
+.btn-enviar input {
+    background-color: #fff;
+    border: none;
+    color: red;
+    font-weight: bold;
+    font-family: "Sora", sans-serif;
+    font-size: 1.3rem;
+    box-shadow: 2px 2px black;
+    border-radius: 1rem;
+}
+
+.btn-add-nova-linha {
+    background-color: #fff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    font-family: "Sora", sans-serif;
+    font-size: 0.2;
+    box-shadow: 2px 2px black;
+    border-radius: 0.2rem;
+    padding: 0rem 0.4rem;
+    cursor: pointer;
+
+}
+
+.desativa {
+    display: none;
+}
+
+.formulario__titulo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.formulario__titulo p {
+    color: var(--cor-texto-secundario);
+}
+
+.btn-fechar-formulario {
+    background-color: #fff;
+    border: none;
+    color: red;
+    font-weight: bold;
+    font-family: "Sora", sans-serif;
+    font-size: 0.2;
+    box-shadow: 2px 2px black;
+    border-radius: 0.2rem;
+    padding: 0rem 0.4rem;
+    cursor: pointer;
+}
+.tabela__chaves p{
+    text-align: center;
+}
+.cabecalho__tabela {
+    background-color: var(--bg-secundario);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 100;
+}
+.cabecalho__pesquisar {
+    display: flex;
+    justify-content: center;
+}
+
+
+.tabela_chaves__local {
+    width: 50vw;
+    border: 0.1rem solid black;
+    box-shadow: 0.1rem 0.1rem black;
+    border-radius: 0.2rem;
+    
+}
+
+.tabela_chaves__local td {
+    
+    border: 1px solid var(--bg-secundario);
+    color: #fff;
+    text-align: center;
+    
+    
+}
+.chave{
+    width: 30vw;
+    
+    
+}
+.status{
+    display: flex;
+    width: 15vw;
+    justify-content: center;
+    
+}
+
+
+#loading-spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 8px solid transparent;
+    border-top-color: #c06c59;
+    border-right-color: #33c9ff70;
+    border-bottom-color: #ffeb337a;
+    border-left-color: #33ff5873;
+    border-radius: 50%;
+    animation: spin 300ms linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
